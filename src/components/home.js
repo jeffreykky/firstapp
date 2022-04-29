@@ -34,6 +34,9 @@ const Home = () => {
     const [godMode, setGodMode] = useState(false);
     const [now, setNow] = useState(moment("2022-04-30 15:30", dateformat));
 
+    useEffect(() => {
+        window.scroll(0, 0)
+    },[])
 
     let i = 0;
     while (i < image.length){
