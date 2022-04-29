@@ -23,31 +23,27 @@ const Home = () => {
         // {time: moment("2022-04-30 18:00", dateformat), file: page7},
         // {time: moment("2022-04-30 19:30", dateformat), file: page8},
     ]
-    // let i = 0;
-    // while (i < image.length){
-    //     const now = moment()
-    //     if (now.isBefore(image[i].time) ) {
-    //         return (
-    //             <div
-    //                 style={{
-    //                     height: '100vh', width: '100vw',
-    //                     backgroundColor: 'rgb(255,255,255)',
-    //                     display: 'flex',
-    //                     flexDirection: 'column',
-    //                     alignItems: 'center',
-    //                     justifyContent: 'center'
-    //                 }}>
-    //                 <img src={image[i].file} alt={'timetable'} style={{width: "100%", height: "auto"}}/>
-    //             </div>
-    //         )
-    //     }
-    //     i++;
-    // }
-    return <div style={{alignItems: 'center',justifyContent: 'center',display:'flex', flexDirection: 'column', color: 'green', backgroundColor:'lightgrey', height: '100vh'}}>
-        <h2>Happy Birthday</h2>
-        <h1>Ken</h1>
-        <h2>2022</h2>
-    </div>
+    let i = 0;
+    while (i < image.length){
+        const now = moment()
+        if (now.isBefore(image[i].time) ) {
+            return (
+                <div
+                    style={{
+                        height: '100vh', width: '100vw',
+                        backgroundColor: 'rgb(255,255,255)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}>
+                    <img src={image[i].file} alt={'timetable'} style={{width: "100%", height: "auto"}}/>
+                </div>
+            )
+        }
+        i++;
+    }
+    return <div/>
 }
 
 
